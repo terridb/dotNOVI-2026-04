@@ -119,6 +119,8 @@ docker push ghcr.io/<jouw-username>/dotnovi:v1
 # 5. Draai een Trivy security scan
 docker run aquasec/trivy image dotnovi:v1
 
+# Commentaar terri: docker run -v /var/run/docker.sock:/var/run/docker.sock aquasec/trivy image dotnovi:v1
+
 # 6. Bekijk de resultaten: zijn er CRITICAL of HIGH issues?
 ```
 
