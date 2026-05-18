@@ -36,3 +36,11 @@ jobs:
         uses: codecov/codecov-action@v6
         with:
           files: ./coverage/lcov.info
+  deploy:
+    needs: [test]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+
+    steps:
+       - name: Deploy to production
+         run: echo "Deploying..."
