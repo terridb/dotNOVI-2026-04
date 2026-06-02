@@ -70,10 +70,9 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: ghcr.io/${{ needs.build-and-push.outputs.image_tag }}:latest
-          format: 'sarif'
-          output: 'trivy-results.sarif'
-          exit-code: '0'
+            image-ref: ghcr.io/${{ github.repository }}:latest   # ← alleen dit
+            format: 'sarif'
+            output: 'trivy-results.sarif'
 
       - name: Upload Trivy results to GitHub Security
         uses: github/codeql-action/upload-sarif@v3
