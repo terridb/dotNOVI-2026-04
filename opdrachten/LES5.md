@@ -274,7 +274,7 @@ docker push ghcr.io/username/dotnovi:dev
 
 # Verify in GHCR
 curl -H "Authorization: token $GITHUB_TOKEN" \
-  https://api.github.com/user/packages
+  https://api.github.com/user/packages?package_type=container
 ```
 
 ### Opdracht 2: Semantic Versioning
