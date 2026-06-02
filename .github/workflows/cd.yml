@@ -99,6 +99,6 @@ jobs:
           event-type: deploy-production.yml
           client-payload: |
             {
-              "image_tag": "${{ needs.build-and-push.outputs.image_tag }}",
+              "image_tag": "ghcr.io/terridb/dotnovi-2026-04:latest",
               "sha": "${{ github.sha }}"
             }
