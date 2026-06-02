@@ -353,7 +353,7 @@ Deploy je applicatie naar Render.com vanuit je CI/CD pipeline.
 ```
 
 ```yaml
-# .github/workflows/deploy-production.yml
+# .github/workflows/deploy-production.yml.yml
 name: Deploy to Production
 
 on:
