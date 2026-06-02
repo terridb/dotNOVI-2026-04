@@ -70,7 +70,7 @@ jobs:
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@master
         with:
-            image-ref: ghcr.io/${{ github.repository }}:latest   # ← alleen dit
+            image-ref: ghcr.io/terridb/dotnovi-2026-04:latest
             format: 'sarif'
             output: 'trivy-results.sarif'
 
